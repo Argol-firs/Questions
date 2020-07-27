@@ -17,7 +17,7 @@ int main()
 		z = 147.3 * pow(a, 5) - pow(a, 3) - 3 * pow(a, 2) - 24 * a - 3;
 
 		d++;
-		cout << "Point" << " "<< d << " " << "=" << z << endl;
+		cout << "Point" + " " + d << " " + "=" + z << endl;
 	}
 	return 0;
 }
