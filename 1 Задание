@@ -1,1 +1,23 @@
+#include <iostream>
+#include <string>
+#include <math.h>
 
+using namespace std;
+
+double a = -1.0, b = 1.0; 
+double c = 0.105263; 
+double z;
+int d;
+
+int main()
+{
+	for (a; a < b; a += c)
+	{
+		cout << "a = " << a << endl;
+		z = 147.3 * pow(a, 5) - pow(a, 3) - 3 * pow(a, 2) - 24 * a - 3;
+
+		d++;
+		cout << "Point" << " "<< d << " " << "=" << z << endl;
+	}
+	return 0;
+}
