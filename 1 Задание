@@ -1,23 +1,30 @@
 #include <iostream>
 #include <string>
-#include <math.h>
+#include <locale.h>
 
 using namespace std;
 
-double a = -1.0, b = 1.0; 
-double c = 0.105263; 
-double z;
-int d;
+int a;
 
 int main()
 {
-	for (a; a < b; a += c)
-	{
-		cout << "a = " << a << endl;
-		z = 147.3 * pow(a, 5) - pow(a, 3) - 3 * pow(a, 2) - 24 * a - 3;
+setlocale(LC_ALL, "Russian");	
+cout << "Введите положительное пятизначное число: " << endl;
+cin >> a;
+//поразрядное разбиение числа
+	if (a >= 10000 && a <= 99999)
+		{
+		cout << "Первый разряд: " << (a / 10000) << endl;
+		cout << "Второй разряд: " << (a / 1000) % 10 << endl;
+		cout << "Третий разряд: " << (a / 100) % 10 << endl;
+		cout << "Четвертый разряд: " << (a / 10) % 10 << endl;
+		cout << "Пятый разряд: " << (a % 10) << endl;
+		}
 
-		d++;
-		cout << "Point" + " " + d << " " + "=" + z << endl;
-	}
+	else {
+		cout << "Ошибка ввода, повторите еще раз" << endl;
+		return main();
+		 }
+
 	return 0;
 }
